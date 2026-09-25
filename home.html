@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav-div{
+            background-color: black;
+            height: 90px;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .logo img{
+            height: 90px;
+            width: 240px;
+            align-items: center;
+        }
+        .nav-links{
+            margin-left: 450px;
+            margin-right: 200px;
+            display: flex;
+            gap: 40px;
+        }
+        .nav-div a{
+            text-decoration: none;
+        }
+        .nav-links h4{
+            font-family: 'Poppins', sans-serif;
+            color : white;
+            font-size: 20px;
+        }
+        .nav-search {
+            margin-left: 30px;
+        }
+        .nav-search i{
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .nav-book {
+            margin-right: 30px;
+        }
+        .nav-book button{
+            background-color: rgb(228, 152, 11);
+            padding: 10px 20px;
+            border-radius:10px;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        .big-screen {
+            width: 100vw;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+        .big-screen img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .big-screen-textcontainer {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            color: white;
+            width: 400px;
+        }
+
+        .big-screen-textcontainer h1 {
+            font-size: 55px;
+            margin: 15px 0;
+        }
+
+        .big-screen-textcontainer p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .big-screen-buttons{
+            display: flex;
+            gap:15px;
+            margin-top: 25px;
+        }
+        .big-screen-buttons button{
+            padding: 12px 25px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .big-screen-buttons button:first-child {
+            background-color: rgb(228, 152, 11);
+            color: white;
+            border: 2px solid rgb(228, 152, 11);
+        }
+        .big-screen-buttons button:last-child {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .big-screen-buttons button:hover {
+            background-color: rgb(200, 130, 5);
+        }
+        .big-screen-buttons button:hover {
+            background-color: white;
+            color: black;
+        }
+        .specialities {
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .specialities h2{
+            font-size: 40px;
+            font-weight: 900px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-div">
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                </div>
+                <div class="nav-links">
+                    <a href=""><h4>Home</h4></a>
+                    <a href=""><h4>Menu</h4></a>
+                    <a href=""><h4>About</h4></a>
+                    <a href=""><h4>Contact</h4></a>
+                </div>
+                <div class="nav-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="nav-book">
+                    <button> <h3>book a table</h3></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="big-screen">
+                <img src="big_dish.png" alt="">
+                <div class="big-screen-textcontainer">
+                     <p>WELCOME TO FOODIESTE</p>
+
+                    <h1>
+                        Good Food<br>
+                        Good Mood
+                    </h1>
+
+                    <p>
+                        Experience the perfect blend of taste, tradition
+                        and fresh ingredients. Our restaurant brings you
+                        delicious food made with love.
+                    </p>
+                    <div class="big-screen-buttons">
+                        <button>View Menu</button>
+                        <button>Book a Table</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="specialities">
+                <h2>Our Specialities</h2>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>
