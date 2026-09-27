@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Menu Page</title>
@@ -15,7 +17,7 @@
 
         /* =========================================
            GENERAL
-           ========================================= */
+        ========================================= */
 
         * {
             margin: 0;
@@ -27,12 +29,13 @@
             font-family: Arial, sans-serif;
             background-color: white;
             color: #222;
+            overflow-x: hidden;
         }
 
 
         /* =========================================
            NAVBAR
-           ========================================= */
+        ========================================= */
 
         .nav-div {
             background-color: black;
@@ -45,96 +48,68 @@
             gap: 25px;
         }
 
-
         .logo img {
             height: 90px;
             width: 240px;
-
             object-fit: contain;
         }
 
-
         .nav-links {
             margin-left: auto;
+            margin-right: 30px;
 
             display: flex;
             gap: 40px;
         }
 
-
         .nav-div a {
             text-decoration: none;
         }
 
-
         .nav-links h4 {
             font-family: Arial, sans-serif;
-
             color: white;
-
             font-size: 20px;
-
             transition: 0.3s;
         }
-
 
         .nav-div h4:hover {
             color: orange;
         }
 
-
-        /* SEARCH */
-
         .nav-search {
             margin-left: 30px;
         }
 
-
         .nav-search i {
             color: white;
-
             font-size: 18px;
-
             cursor: pointer;
-
             transition: 0.3s;
         }
-
 
         .nav-search i:hover {
             color: orange;
         }
-
-
-        /* BOOK TABLE */
 
         .nav-book {
             margin-right: 30px;
             margin-left: 20px;
         }
 
-
         .nav-book button {
             background-color: rgb(228, 152, 11);
-
             padding: 10px 20px;
-
             border-radius: 10px;
-
             color: white;
-
             cursor: pointer;
-
             border: none;
-
             transition: 0.3s;
         }
-
 
         .nav-book button:hover {
             background-color: #ff9f1c;
         }
-
 
         .nav-book h3 {
             font-size: 15px;
@@ -143,94 +118,65 @@
 
         /* =========================================
            MENU SECTION
-           ========================================= */
+        ========================================= */
 
         .menu-section {
-
             width: 100%;
-
             padding: 45px 0 60px;
-
             background-color: #ffffff;
         }
 
 
         /* =========================================
            MENU HEADING
-           ========================================= */
+        ========================================= */
 
         .menu-heading {
-
             text-align: center;
         }
 
-
         .menu-heading h1 {
-
             font-family: Georgia, 'Times New Roman', serif;
-
             font-size: 42px;
-
             color: #222;
-
             margin-bottom: 10px;
         }
 
-
-        /* ORANGE LINE */
-
         .heading-line {
-
             width: 45px;
-
             height: 4px;
-
             background-color: #e89a22;
-
             margin: 0 auto 14px;
-
             border-radius: 5px;
         }
 
-
         .menu-heading p {
-
             font-family: Arial, sans-serif;
-
             font-size: 14px;
-
             line-height: 1.7;
-
             color: #777;
         }
 
 
         /* =========================================
            CATEGORY BUTTONS
-           ========================================= */
+        ========================================= */
 
         .menu-categories {
-
             display: flex;
-
             justify-content: center;
-
             align-items: center;
 
             gap: 25px;
 
             margin-top: 32px;
-
             margin-bottom: 35px;
 
             flex-wrap: wrap;
         }
 
-
         .category {
-
             border: none;
-
             background: transparent;
 
             padding: 11px 20px;
@@ -238,7 +184,6 @@
             border-radius: 25px;
 
             font-size: 14px;
-
             font-weight: 600;
 
             color: #333;
@@ -248,41 +193,28 @@
             transition: all 0.3s ease;
         }
 
-
         .category:hover {
-
             color: #e88f17;
-
             background-color: #fff5e8;
         }
 
-
-        /* ACTIVE CATEGORY */
-
         .category.active {
-
             background-color: #f28b18;
-
             color: white;
         }
 
-
         .category.active:hover {
-
             background-color: #f28b18;
-
             color: white;
         }
 
 
         /* =========================================
            MENU CONTAINER
-           ========================================= */
+        ========================================= */
 
         .menu-container {
-
             width: 92%;
-
             max-width: 1200px;
 
             margin: auto;
@@ -297,10 +229,9 @@
 
         /* =========================================
            MENU CARD
-           ========================================= */
+        ========================================= */
 
         .menu-card {
-
             background-color: #fff;
 
             border: 1px solid #eeeeee;
@@ -316,9 +247,7 @@
                 box-shadow 0.3s ease;
         }
 
-
         .menu-card:hover {
-
             transform: translateY(-5px);
 
             box-shadow:
@@ -328,12 +257,10 @@
 
         /* =========================================
            FOOD IMAGE
-           ========================================= */
+        ========================================= */
 
         .menu-card img {
-
             width: 100%;
-
             height: 155px;
 
             object-fit: cover;
@@ -344,16 +271,13 @@
 
         /* =========================================
            CARD CONTENT
-           ========================================= */
+        ========================================= */
 
         .menu-content {
-
             padding: 14px 12px 17px;
         }
 
-
         .menu-content h2 {
-
             font-family: Arial, sans-serif;
 
             font-size: 17px;
@@ -363,9 +287,7 @@
             margin-bottom: 8px;
         }
 
-
         .menu-content p {
-
             font-family: Arial, sans-serif;
 
             color: #777;
@@ -382,10 +304,9 @@
 
         /* =========================================
            PRICE
-           ========================================= */
+        ========================================= */
 
         .price {
-
             color: #e87816;
 
             font-family: Arial, sans-serif;
@@ -398,20 +319,18 @@
 
         /* =========================================
            FILTER ANIMATION
-           ========================================= */
+        ========================================= */
 
         .menu-card.hidden {
-
             display: none;
         }
 
 
         /* =========================================
            NO ITEMS MESSAGE
-           ========================================= */
+        ========================================= */
 
         .no-items {
-
             display: none;
 
             text-align: center;
@@ -428,51 +347,105 @@
         }
 
 
+        /* =================================================
+           RESPONSIVE ONLY
+        ================================================= */
+
+
         /* =========================================
-           RESPONSIVE - TABLET
-           ========================================= */
+           TABLET / SMALL LAPTOP
+        ========================================= */
 
         @media (max-width: 1000px) {
 
-            .nav-links {
-
-                gap: 20px;
+            .nav-div {
+                padding: 0 15px;
             }
-
-
-            .nav-links h4 {
-
-                font-size: 17px;
-            }
-
 
             .logo img {
-
                 width: 190px;
             }
 
-
-            .nav-book {
-
+            .nav-links {
+                gap: 20px;
                 margin-right: 15px;
             }
 
+            .nav-links h4 {
+                font-size: 17px;
+            }
+
+            .nav-search {
+                margin-left: 10px;
+            }
+
+            .nav-book {
+                margin-right: 5px;
+                margin-left: 5px;
+            }
 
             .menu-container {
-
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
 
         /* =========================================
-           RESPONSIVE - MOBILE
-           ========================================= */
+           TABLET
+        ========================================= */
+
+        @media (max-width: 800px) {
+
+            .nav-div {
+                height: auto;
+
+                min-height: 90px;
+
+                padding: 10px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .logo {
+                width: 100%;
+
+                display: flex;
+
+                justify-content: center;
+            }
+
+            .logo img {
+                width: 190px;
+                height: 75px;
+            }
+
+            .nav-links {
+                margin: 0;
+
+                gap: 25px;
+
+                justify-content: center;
+            }
+
+            .nav-search {
+                margin-left: 0;
+            }
+
+            .nav-book {
+                margin: 0;
+            }
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
 
         @media (max-width: 700px) {
 
             .nav-div {
-
                 height: auto;
 
                 min-height: 80px;
@@ -482,19 +455,20 @@
                 flex-wrap: wrap;
 
                 justify-content: center;
+
+                gap: 12px;
             }
 
+            .logo {
+                width: 100%;
+            }
 
             .logo img {
-
                 width: 180px;
-
                 height: 70px;
             }
 
-
             .nav-links {
-
                 margin-left: 0;
 
                 width: 100%;
@@ -504,61 +478,49 @@
                 gap: 20px;
 
                 order: 3;
+
+                flex-wrap: wrap;
             }
 
-
             .nav-links h4 {
-
                 font-size: 15px;
             }
 
-
             .nav-search {
-
                 margin-left: 0;
-            }
 
+                order: 2;
+            }
 
             .nav-book {
-
                 margin: 0;
+
+                order: 4;
             }
 
-
             .menu-heading h1 {
-
                 font-size: 34px;
             }
 
-
             .menu-heading p {
-
                 padding: 0 20px;
             }
 
-
             .menu-heading p br {
-
                 display: none;
             }
 
-
             .menu-categories {
-
                 gap: 5px;
 
                 padding: 0 10px;
             }
 
-
             .category {
-
                 padding: 9px 14px;
             }
 
-
             .menu-container {
-
                 grid-template-columns: 1fr;
 
                 width: 90%;
@@ -567,38 +529,76 @@
 
 
         /* =========================================
-           VERY SMALL SCREEN
-           ========================================= */
+           SMALL MOBILE
+        ========================================= */
 
         @media (max-width: 450px) {
 
             .nav-links {
-
                 gap: 12px;
             }
 
-
             .nav-links h4 {
+                font-size: 13px;
+            }
+
+            .nav-search {
+                display: none;
+            }
+
+            .nav-book button {
+                padding: 8px 12px;
+            }
+
+            .nav-book h3 {
+                font-size: 12px;
+            }
+
+            .menu-heading h1 {
+                font-size: 30px;
+            }
+
+            .menu-section {
+                padding-top: 35px;
+            }
+
+            .menu-categories {
+                gap: 4px;
+            }
+
+            .category {
+                padding: 8px 12px;
 
                 font-size: 13px;
             }
 
+            .menu-container {
+                width: 92%;
+            }
+        }
 
-            .nav-book button {
 
-                padding: 8px 12px;
+        /* =========================================
+           VERY SMALL MOBILE
+        ========================================= */
+
+        @media (max-width: 350px) {
+
+            .nav-links {
+                gap: 9px;
             }
 
-
-            .nav-book h3 {
-
+            .nav-links h4 {
                 font-size: 12px;
             }
 
+            .logo img {
+                width: 165px;
+            }
 
-            .menu-heading h1 {
-
-                font-size: 30px;
+            .category {
+                padding: 7px 10px;
+                font-size: 12px;
             }
         }
 
@@ -612,7 +612,7 @@
 
     <!-- =========================================
          NAVBAR
-         ========================================= -->
+    ========================================= -->
 
     <header>
 
@@ -625,7 +625,9 @@
 
                 <div class="logo">
 
-                    <img src="photos/logo.png" alt="Restaurant Logo">
+                    <img
+                        src="photos/logo.png"
+                        alt="Restaurant Logo">
 
                 </div>
 
@@ -668,7 +670,9 @@
 
                     <button>
 
-                        <h3>Book a Table</h3>
+                        <h3>
+                            Book a Table
+                        </h3>
 
                     </button>
 
@@ -685,7 +689,7 @@
 
     <!-- =========================================
          MENU SECTION
-         ========================================= -->
+    ========================================= -->
 
     <main>
 
@@ -696,7 +700,9 @@
 
             <div class="menu-heading">
 
-                <h1>Our Menu</h1>
+                <h1>
+                    Our Menu
+                </h1>
 
                 <div class="heading-line"></div>
 
@@ -713,9 +719,10 @@
 
             <!-- =====================================
                  CATEGORY BUTTONS
-                 ===================================== -->
+            ===================================== -->
 
             <div class="menu-categories">
+
 
                 <button
                     class="category active"
@@ -761,21 +768,19 @@
 
                 </button>
 
+
             </div>
 
 
 
             <!-- =====================================
                  MENU CARDS
-                 ===================================== -->
+            ===================================== -->
 
             <div class="menu-container">
 
 
-
-                <!-- =================================
-                     APPETIZER
-                     ================================= -->
+                <!-- APPETIZER -->
 
                 <div
                     class="menu-card"
@@ -785,10 +790,11 @@
                         src="https://media.istockphoto.com/id/1430066729/photo/fried-spring-rolls-with-sweet-chili-sauce-and-lime-on-plate.webp?a=1&b=1&s=612x612&w=0&k=20&c=Ghh0-oPSNbc-JICIAvbVnmDnlWiekf-Bx_OoAqyFSg4="
                         alt="Spring Rolls">
 
-
                     <div class="menu-content">
 
-                        <h2>Spring Rolls</h2>
+                        <h2>
+                            Spring Rolls
+                        </h2>
 
                         <p>
                             Crispy rolls filled with fresh
@@ -805,9 +811,7 @@
 
 
 
-                <!-- =================================
-                     MAIN COURSE
-                     ================================= -->
+                <!-- MAIN COURSE -->
 
                 <div
                     class="menu-card"
@@ -817,10 +821,11 @@
                         src="https://plus.unsplash.com/premium_photo-1664472634106-1430c3973e68?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UGFzdGElMjBBbGZyZWRvfGVufDB8fDB8fHww"
                         alt="Pasta Alfredo">
 
-
                     <div class="menu-content">
 
-                        <h2>Pasta Alfredo</h2>
+                        <h2>
+                            Pasta Alfredo
+                        </h2>
 
                         <p>
                             Creamy Alfredo pasta with
@@ -837,9 +842,7 @@
 
 
 
-                <!-- =================================
-                     MAIN COURSE
-                     ================================= -->
+                <!-- MAIN COURSE -->
 
                 <div
                     class="menu-card"
@@ -849,10 +852,11 @@
                         src="https://images.unsplash.com/photo-1633436375795-12b3b339712f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEdyaWxsZWQlMjBDaGlja2VufGVufDB8fDB8fHww"
                         alt="Grilled Chicken">
 
-
                     <div class="menu-content">
 
-                        <h2>Grilled Chicken</h2>
+                        <h2>
+                            Grilled Chicken
+                        </h2>
 
                         <p>
                             Juicy grilled chicken with
@@ -869,9 +873,7 @@
 
 
 
-                <!-- =================================
-                     MAIN COURSE
-                     ================================= -->
+                <!-- MAIN COURSE -->
 
                 <div
                     class="menu-card"
@@ -881,10 +883,11 @@
                         src="https://images.unsplash.com/photo-1764705309243-c47cbc9792e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1hcmdoZXJpdGElMjBwaXp6YXxlbnwwfHwwfHx8MA%3D%3D"
                         alt="Margherita Pizza">
 
-
                     <div class="menu-content">
 
-                        <h2>Margherita Pizza</h2>
+                        <h2>
+                            Margherita Pizza
+                        </h2>
 
                         <p>
                             Classic pizza with fresh tomato,
@@ -901,9 +904,7 @@
 
 
 
-                <!-- =================================
-                     DESSERT
-                     ================================= -->
+                <!-- DESSERT -->
 
                 <div
                     class="menu-card"
@@ -913,10 +914,11 @@
                         src="https://images.unsplash.com/photo-1585504455924-3d3b0eb2b8ee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fENob2NvbGF0ZSUyMExhdmElMjBDYWtlfGVufDB8fDB8fHww"
                         alt="Chocolate Lava Cake">
 
-
                     <div class="menu-content">
 
-                        <h2>Chocolate Lava Cake</h2>
+                        <h2>
+                            Chocolate Lava Cake
+                        </h2>
 
                         <p>
                             Warm chocolate cake with
@@ -933,9 +935,7 @@
 
 
 
-                <!-- =================================
-                     BEVERAGE
-                     ================================= -->
+                <!-- BEVERAGE -->
 
                 <div
                     class="menu-card"
@@ -945,10 +945,11 @@
                         src="https://plus.unsplash.com/premium_photo-1661510500212-e3d96478a574?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fEZyZXNoJTIwTGltZSUyMFNvZGF8ZW58MHx8MHx8fDA%3D"
                         alt="Fresh Lime Soda">
 
-
                     <div class="menu-content">
 
-                        <h2>Fresh Lime Soda</h2>
+                        <h2>
+                            Fresh Lime Soda
+                        </h2>
 
                         <p>
                             Refreshing lime with
@@ -968,7 +969,9 @@
                 <!-- NO ITEMS MESSAGE -->
 
                 <div class="no-items">
+
                     No items available in this category.
+
                 </div>
 
 
@@ -982,24 +985,26 @@
 
     <!-- =========================================
          JAVASCRIPT
-         ========================================= -->
+    ========================================= -->
 
     <script>
 
         // Get all category buttons
+
         const categoryButtons =
             document.querySelectorAll(".category");
 
 
         // Get all menu cards
+
         const menuCards =
             document.querySelectorAll(".menu-card");
 
 
         // Get no-items message
+
         const noItems =
             document.querySelector(".no-items");
-
 
 
         // Add click event to every category button
@@ -1015,7 +1020,6 @@
                     this.getAttribute("data-category");
 
 
-
                 // Remove active class from all buttons
 
                 categoryButtons.forEach(btn => {
@@ -1025,17 +1029,14 @@
                 });
 
 
-
                 // Add active class to clicked button
 
                 this.classList.add("active");
 
 
-
                 // Keep track of visible cards
 
                 let visibleItems = 0;
-
 
 
                 // Check every menu card
@@ -1047,7 +1048,6 @@
 
                     const cardCategory =
                         card.getAttribute("data-category");
-
 
 
                     // If All is selected
@@ -1074,7 +1074,6 @@
                     }
 
                 });
-
 
 
                 // Show message if there are no items

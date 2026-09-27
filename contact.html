@@ -1,83 +1,1328 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+
+    <title>Contact - Fooodeste</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <style>
-         *{
+
+        /* =========================
+           BASIC RESET
+        ========================= */
+
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        .nav-div{
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .nav-div {
             background-color: black;
-            height: 90px;
-            width: 100vw;
+            min-height: 90px;
+            width: 100%;
+
             display: flex;
             align-items: center;
+
             gap: 25px;
         }
-        .logo img{
+
+
+        .logo {
+            flex-shrink: 0;
+        }
+
+
+        .logo img {
             height: 90px;
             width: 240px;
+            object-fit: contain;
+        }
+
+
+        .nav-links {
+            margin-left: auto;
+
+            display: flex;
+
+            gap: 40px;
+
             align-items: center;
         }
-        .nav-links{
-            margin-left: 450px;
-            margin-right: 200px;
-            display: flex;
-            gap: 40px;
-        }
-        .nav-div a{
+
+
+        .nav-div a {
             text-decoration: none;
         }
-        .nav-links h4{
+
+
+        .nav-links h4 {
             font-family: 'Poppins', sans-serif;
-            color : white;
+
+            color: white;
+
             font-size: 20px;
+
+            font-weight: 500;
         }
+
+
+        .nav-links h4:hover {
+            color: rgb(228, 152, 11);
+        }
+
+
         .nav-search {
             margin-left: 30px;
         }
-        .nav-search i{
+
+
+        .nav-search i {
             color: white;
+
             font-size: 18px;
+
             cursor: pointer;
         }
+
+
         .nav-book {
             margin-right: 30px;
         }
-        .nav-book button{
+
+
+        .nav-book button {
             background-color: rgb(228, 152, 11);
+
             padding: 10px 20px;
-            border-radius:10px;
+
+            border-radius: 10px;
+
             color: white;
+
             cursor: pointer;
+
             border: none;
         }
+
+
+        .nav-book button h3 {
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .contact-hero {
+
+            height: 300px;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.65)
+                ),
+                url("photos/contact_image.png");
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .hero-content {
+
+            text-align: center;
+
+            color: white;
+
+            width: 420px;
+
+            padding: 20px;
+
+            border: 1px solid rgba(255, 255, 255, 0.5);
+
+            border-radius: 12px;
+
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+
+        .hero-content h1 {
+
+            font-size: 32px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .hero-content p {
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           CONTACT SECTION
+        ========================= */
+
+        .contact-section {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 25px auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1.2fr;
+
+            gap: 50px;
+
+            align-items: start;
+        }
+
+
+        /* =========================
+           CONTACT INFORMATION
+        ========================= */
+
+        .contact-info {
+
+            padding: 10px;
+        }
+
+
+        .contact-info h2 {
+
+            font-size: 18px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .contact-item {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 20px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .contact-item i {
+
+            color: #f47b20;
+
+            font-size: 22px;
+
+            width: 25px;
+
+            text-align: center;
+        }
+
+
+        .contact-item div {
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        .contact-item p {
+
+            margin: 0;
+        }
+
+
+        .contact-item small {
+
+            color: #555;
+        }
+
+
+        /* =========================
+           FOLLOW US
+        ========================= */
+
+        .follow {
+
+            margin-top: 35px;
+        }
+
+
+        .follow h2 {
+
+            font-size: 18px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .social-icons {
+
+            display: flex;
+
+            gap: 20px;
+        }
+
+
+        .social-icons a {
+
+            text-decoration: none;
+
+            color: black;
+        }
+
+
+        .social-icons i {
+
+            font-size: 23px;
+        }
+
+
+        .social-icons a:hover {
+
+            color: #f47b20;
+        }
+
+
+        /* =========================
+           FORM
+        ========================= */
+
+        .contact-form {
+
+            background-color: #fffaf3;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
+        }
+
+
+        .contact-form h2 {
+
+            font-size: 18px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .form-group {
+
+            margin-bottom: 14px;
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            margin-bottom: 6px;
+        }
+
+
+        .form-group label span {
+
+            color: #f47b20;
+        }
+
+
+        .form-group input,
+        .form-group textarea {
+
+            width: 100%;
+
+            padding: 10px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 6px;
+
+            font-size: 14px;
+
+            outline: none;
+        }
+
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+
+            border-color: #f47b20;
+        }
+
+
+        .form-group textarea {
+
+            height: 100px;
+
+            resize: none;
+        }
+
+
+        .send-btn {
+
+            width: 100%;
+
+            padding: 11px;
+
+            background-color: #ff7100;
+
+            border: none;
+
+            border-radius: 8px;
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        .send-btn:hover {
+
+            background-color: #e45f00;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background-color: #050b0e;
+
+            color: white;
+
+            min-height: 65px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 40px;
+        }
+
+
+        .footer-logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+        }
+
+
+        .footer-logo i {
+
+            color: #ff7100;
+
+            font-size: 22px;
+        }
+
+
+        .footer-logo span {
+
+            font-size: 16px;
+
+            font-weight: bold;
+        }
+
+
+        .footer-links {
+
+            display: flex;
+
+            gap: 25px;
+        }
+
+
+        .footer-links a {
+
+            text-decoration: none;
+
+            color: white;
+
+            font-size: 12px;
+        }
+
+
+        .footer-links a:hover {
+
+            color: #ff7100;
+        }
+
+
+        .copyright {
+
+            font-size: 12px;
+        }
+
+
+        /* =================================================
+           RESPONSIVE
+        ================================================= */
+
+
+        /* =========================
+           1200px
+        ========================= */
+
+        @media (max-width: 1200px) {
+
+            .nav-div {
+
+                padding: 0 20px;
+            }
+
+
+            .logo img {
+
+                width: 200px;
+            }
+
+
+            .nav-links {
+
+                gap: 25px;
+
+                margin-right: 10px;
+            }
+
+
+            .nav-links h4 {
+
+                font-size: 18px;
+            }
+
+
+            .nav-search {
+
+                margin-left: 10px;
+            }
+
+
+            .nav-book {
+
+                margin-right: 0;
+            }
+
+
+            .contact-section {
+
+                width: 92%;
+
+                gap: 35px;
+            }
+
+        }
+
+
+        /* =========================
+           900px
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-div {
+
+                height: auto;
+
+                min-height: 90px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                padding: 10px 15px;
+            }
+
+
+            .logo {
+
+                width: 100%;
+
+                display: flex;
+
+                justify-content: center;
+            }
+
+
+            .logo img {
+
+                width: 200px;
+
+                height: 80px;
+            }
+
+
+            .nav-links {
+
+                margin: 0;
+
+                gap: 25px;
+            }
+
+
+            .nav-search {
+
+                margin: 0;
+            }
+
+
+            .nav-book {
+
+                margin: 0;
+            }
+
+
+            .contact-section {
+
+                width: 90%;
+
+                gap: 30px;
+            }
+
+        }
+
+
+        /* =========================
+           700px
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            /* NAVIGATION */
+
+            .nav-div {
+
+                flex-direction: column;
+
+                height: auto;
+
+                min-height: auto;
+
+                padding: 15px;
+
+                gap: 15px;
+            }
+
+
+            .logo {
+
+                width: 100%;
+            }
+
+
+            .logo img {
+
+                width: 180px;
+
+                height: 65px;
+            }
+
+
+            .nav-links {
+
+                margin: 0;
+
+                display: flex;
+
+                gap: 18px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                width: 100%;
+            }
+
+
+            .nav-links h4 {
+
+                font-size: 14px;
+            }
+
+
+            .nav-search {
+
+                display: none;
+            }
+
+
+            .nav-book {
+
+                margin: 0;
+            }
+
+
+            .nav-book button {
+
+                padding: 8px 18px;
+            }
+
+
+            /* HERO */
+
+            .contact-hero {
+
+                height: 230px;
+            }
+
+
+            .hero-content {
+
+                width: 85%;
+
+                padding: 18px;
+            }
+
+
+            .hero-content h1 {
+
+                font-size: 26px;
+            }
+
+
+            .hero-content p {
+
+                font-size: 12px;
+            }
+
+
+            /* CONTACT */
+
+            .contact-section {
+
+                width: 90%;
+
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+
+                margin: 25px auto;
+            }
+
+
+            .contact-info {
+
+                padding: 0;
+            }
+
+
+            .contact-form {
+
+                padding: 18px;
+            }
+
+
+            /* FOOTER */
+
+            footer {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+                padding: 20px;
+
+                text-align: center;
+            }
+
+
+            .footer-links {
+
+                gap: 18px;
+            }
+
+        }
+
+
+        /* =========================
+           500px
+        ========================= */
+
+        @media (max-width: 500px) {
+
+            .nav-links {
+
+                gap: 14px;
+            }
+
+
+            .nav-links h4 {
+
+                font-size: 13px;
+            }
+
+
+            .contact-hero {
+
+                height: 230px;
+            }
+
+
+            .hero-content {
+
+                width: 90%;
+            }
+
+
+            .contact-section {
+
+                width: 92%;
+            }
+
+
+            .contact-item {
+
+                gap: 15px;
+            }
+
+
+            .contact-item i {
+
+                font-size: 20px;
+            }
+
+
+            .contact-item div {
+
+                font-size: 13px;
+            }
+
+
+            .social-icons {
+
+                gap: 18px;
+            }
+
+
+            footer {
+
+                padding: 20px 10px;
+            }
+
+
+            .footer-links {
+
+                gap: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+        }
+
+
+        /* =========================
+           400px
+        ========================= */
+
+        @media (max-width: 400px) {
+
+            .logo img {
+
+                width: 170px;
+
+                height: 60px;
+            }
+
+
+            .nav-links {
+
+                gap: 11px;
+            }
+
+
+            .nav-links h4 {
+
+                font-size: 12px;
+            }
+
+
+            .hero-content h1 {
+
+                font-size: 23px;
+            }
+
+
+            .hero-content p {
+
+                font-size: 11px;
+            }
+
+
+            .contact-section {
+
+                width: 92%;
+            }
+
+
+            .contact-form {
+
+                padding: 15px;
+            }
+
+
+            .footer-links {
+
+                gap: 12px;
+            }
+
+
+            .copyright {
+
+                font-size: 10px;
+            }
+
+        }
+
+
+        /* =========================
+           350px
+        ========================= */
+
+        @media (max-width: 350px) {
+
+            .nav-links {
+
+                gap: 8px;
+            }
+
+
+            .nav-links h4 {
+
+                font-size: 11px;
+            }
+
+
+            .nav-book button {
+
+                padding: 7px 14px;
+            }
+
+
+            .nav-book button h3 {
+
+                font-size: 12px;
+            }
+
+
+            .hero-content {
+
+                padding: 14px;
+            }
+
+
+            .hero-content h1 {
+
+                font-size: 21px;
+            }
+
+
+            .hero-content p {
+
+                font-size: 10px;
+            }
+
+        }
+
     </style>
+
 </head>
+
+
 <body>
-       <header>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <header>
+
         <nav>
+
             <div class="nav-div">
+
+
                 <div class="logo">
-                    <img src="photos/logo.png" alt="">
+
+                    <img
+                        src="photos/logo.png"
+                        alt="Fooodeste Logo">
+
                 </div>
+
+
                 <div class="nav-links">
-                    <a href="home.html"><h4>Home</h4></a>
-                    <a href="menu.html"><h4>Menu</h4></a>
-                    <a href="about.html"><h4>About</h4></a>
-                    <a href=""><h4>Contact</h4></a>
+
+                    <a href="home.html">
+                        <h4>Home</h4>
+                    </a>
+
+
+                    <a href="menu.html">
+                        <h4>Menu</h4>
+                    </a>
+
+
+                    <a href="about.html">
+                        <h4>About</h4>
+                    </a>
+
+
+                    <a href="contact.html">
+                        <h4>Contact</h4>
+                    </a>
+
                 </div>
+
+
                 <div class="nav-search">
+
                     <i class="fa-solid fa-magnifying-glass"></i>
+
                 </div>
+
+
                 <div class="nav-book">
-                    <button> <h3>book a table</h3></button>
+
+                    <button>
+
+                        <h3>
+                            Book a Table
+                        </h3>
+
+                    </button>
+
                 </div>
+
+
             </div>
+
         </nav>
-    </header> 
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="contact-hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Get In Touch
+            </h1>
+
+            <p>
+                We'd love to hear from you! Whether you have a question,
+                feedback, or want to make a reservation, feel free to reach out.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================= -->
+
+    <section class="contact-section">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="contact-info">
+
+            <h2>
+                Contact Information
+            </h2>
+
+
+            <!-- PHONE -->
+
+            <div class="contact-item">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <div>
+
+                    <p>
+                        +91 98765 43210
+                    </p>
+
+                    <small>
+                        (Call us between 10 AM - 10 PM)
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-item">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                <div>
+
+                    <p>
+                        info@fooodeste.com
+                    </p>
+
+                    <small>
+                        (We reply within 24 hours)
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADDRESS -->
+
+            <div class="contact-item">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <div>
+
+                    <p>
+                        123 Food Street, Green Park,
+                        <br>
+                        Bangalore - 560001
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SOCIAL MEDIA -->
+
+            <div class="follow">
+
+                <h2>
+                    Follow Us
+                </h2>
+
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT SIDE FORM -->
+
+        <div class="contact-form">
+
+            <h2>
+                Send Us a Message
+            </h2>
+
+
+            <form>
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label>
+                        Name <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Your name"
+                        required>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label>
+                        Email <span>*</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        placeholder="Your email"
+                        required>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="form-group">
+
+                    <label>
+                        Message <span>*</span>
+                    </label>
+
+                    <textarea
+                        placeholder="Your message"
+                        required></textarea>
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="send-btn">
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+
+        <div class="footer-logo">
+
+            <i class="fa-solid fa-utensils"></i>
+
+            <span>
+                Fooodeste
+            </span>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Fooodeste. All rights reserved.
+
+        </div>
+
+
+    </footer>
+
+
 </body>
+
 </html>
